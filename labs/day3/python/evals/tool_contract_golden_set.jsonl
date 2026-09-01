@@ -1,0 +1,30 @@
+// tool_contract_golden_set.jsonl — Part E eval spec.
+//
+// Format: one JSON object per line. Lines starting with // are ignored by
+// the runner (part_e_evaluate.py strips them before parsing).
+//
+// Three golden cases, per Module 9's "Golden cases" list — a read, an
+// approved write, and a no-tool request. The fourth case Module 9 names
+// ("rejected write") is deliberately NOT included here: evaluating a
+// human approval-DENIAL decision through evaluate_agent/LocalEvaluator
+// isn't demonstrated anywhere in the Day 3 demonstrations or docs, so it
+// is deferred as a follow-up rather than having this lab invent an
+// ungrounded evaluation mechanism for it (see the "On the missing
+// 'rejected write' case" section of part_e_evaluate.py's module docstring
+// for the full reasoning).
+//
+// Schema (per row):
+//   {
+//     "query": "the user's message",
+//     "expected_tool": "wit_work_item" | "wit_work_item_write" | null,
+//     "expected_args": { "action": "...", "id": <work-item-id> }
+//   }
+//
+// A null expected_tool means this case expects NO tool call at all — see
+// part_e_evaluate.py's no_tool_called() custom evaluator, since the
+// built-in tool_calls_present/tool_call_args_match checks can only verify
+// that expected calls are present ("extras OK" per the framework's own
+// built-in-checks table), not that zero calls happened.
+{"query": "Get work item 42.", "expected_tool": "wit_work_item", "expected_args": {"action": "get", "id": 42}}
+{"query": "Update work item 42: mark it reviewed.", "expected_tool": "wit_work_item_write", "expected_args": {"action": "update", "id": 42}}
+{"query": "What's the difference between a bug and a task in Azure DevOps?", "expected_tool": null, "expected_args": {}}
