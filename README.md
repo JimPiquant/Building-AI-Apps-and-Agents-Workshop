@@ -26,10 +26,19 @@ A **post-workshop capstone project** (solo or teams of 2–3, ~4–6 weeks) clos
 docs/          Prerequisites, curriculum overview, pre-workshop prep, terminology
 manifests/     Pinned SDK / runtime versions for this workshop delivery
 labs/          Lab instructions and starter templates, one folder per day (labs/dayN/python)
+demos/         Optional runnable code behind each day's live demonstrations (demos/dayN)
 pdfs/          PDF exports of each day's slide deck, added after each day is complete
 ```
 
-Additional day folders (`labs/day3/`, `pdfs/day3/`, and so on) will appear here before each day's session — the repo grows as the workshop progresses.
+Additional day folders (`labs/day4/`, `demos/day4/`, `pdfs/day4/`, and so on) will appear here before each day's session — the repo grows as the workshop progresses.
+
+## Demonstrations
+Each day's live lecture is punctuated by short, runnable demonstrations —
+[`demos/`](demos/) has the exact code behind every one, grouped by day
+(`demos/dayN/module-N-demo-N-<slug>/`). These aren't required for the
+labs, but the lab code frequently references a specific demo by name as
+the pattern it's reusing or extending — worth a look if a lab file's
+comment points you at one.
 
 ## A note about the uv utility
 The workshop uses uv, the modern replacement for environment and package management for Python applications.  uv replaces other tools like pip, poetry and conda. https://docs.astral.sh/uv/
