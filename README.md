@@ -30,7 +30,7 @@ demos/         Optional runnable code behind each day's live demonstrations (dem
 pdfs/          PDF exports of each day's slide deck, added after each day is complete
 ```
 
-Additional day folders (`labs/day4/`, `demos/day4/`, `pdfs/day4/`, and so on) will appear here before each day's session — the repo grows as the workshop progresses.
+Additional day folders (`labs/day5/`, `demos/day5/`, `pdfs/day5/`, and so on) will appear here before each day's session — the repo grows as the workshop progresses.
 
 ## Demonstrations
 Each day's live lecture is punctuated by short, runnable demonstrations —
